@@ -1,0 +1,23 @@
+﻿@model HomeVM
+
+
+<h2>@Model.Tittle</h2>
+
+@foreach (var item in Model.ImmovableProperties)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="@item.ImageThumbnail" alt="">
+            <div class="caption">
+                <h3 class="pull-right">@item.Price.ToString("c")</h3>
+                <h3>
+                    <a asp-controller="Home" asp-action="Details" asp-route-id="@item.SerialNumber">@item.District</a> - @item.Place - @item.Area
+                </h3>
+                <h4>
+                    Ulica : @item.Street
+                </h4>
+                <p>@item.Description</p>
+            </div>
+        </div>
+    </div>
+}

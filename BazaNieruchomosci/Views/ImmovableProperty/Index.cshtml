@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ImmovableProperty>
+
+<table class="table" style="background-color:lightgray">
+    <thead>
+        <tr>
+            <th>Opis</th>
+            <th>Województwo</th>
+            <th>Miasto</th>
+            <th>Ulica</th>
+            <th>Powierzchnia</th>
+            <th>Cena</th>
+            <th>
+                <a asp-action="Create" class="btn btn-default btn-sm">Dodaj</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                <td>@Html.DisplayFor(modelItem => item.District)</td>
+                <td>@Html.DisplayFor(modelItem => item.Place)</td>
+                <td>@Html.DisplayFor(modelItem => item.Street)</td>
+                <td>@Html.DisplayFor(modelItem => item.Area)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                <td><img src="@item.ImageThumbnail" height="100" width="100" /></td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.SerialNumber" class="btn btn-default btn-sm" style="margin-bottom:3px">Szczegóły</a>
+                    <a asp-action="Edit" asp-route-id="@item.SerialNumber" class="btn btn-default btn-sm" style="margin-bottom:3px">Edytuj</a>
+                    <a asp-action="Delete" asp-route-id="@item.SerialNumber" class="btn btn-default btn-sm" style="margin-bottom:3px">Usuń</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
