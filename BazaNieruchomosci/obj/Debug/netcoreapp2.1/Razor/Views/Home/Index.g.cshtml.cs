@@ -94,7 +94,7 @@ WriteAttributeValue("", 190, item.ImageThumbnail, 190, 20, false);
             WriteLiteral("</h3>\n                <h3>\n                    ");
             EndContext();
             BeginContext(365, 98, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db4569318af64322b5064976b1095054", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec01179f67a8487bb9a04306adf25b3d", async() => {
                 BeginContext(446, 13, false);
 #line 14 "C:\Users\Michał U\Desktop\VS_2017_WORKSPACE\BazaNieruchomosci\BazaNieruchomosci\Views\Home\Index.cshtml"
                                                                                                Write(item.District);
